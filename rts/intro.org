@@ -1,0 +1,89 @@
+#+TITLE: Intro To Real Time Systems
+#+DESCRIPTION: An introduction to general structure of an RTS and my first org document.
+#+AUTHOR: Rahul Sharma
+
+* Evolution of RTS
+The history of mankind with computers can be broadly classified into:
+  - Pre-PC or mainframe era
+  - PC era
+  - Post-PC or mobile devices era
+
+In the first two, embedded devices were limited to space and defence but nowadays these are ubiquotous.
+Growing at phenomenal rate and indespensible for daily life.
+Examples:
+  - Router
+  - Microwaves
+  - Smart refrigerators
+  - Healthcare testing equipment
+  - Digital cameras
+  - Set-top boxes
+  - Factory robots
+
+Computers in real-time applications have surpassed conventional computers. About 70% of processors produced are used for real-time and embedded computing purposes.
+
+Triggers:
+  - Performant computers
+  - Energy efficiency
+  - Shrinking sizes
+  - Reduced size
+  - Cheap
+
+* Definition
+A system that requires a quantitative notion/expression of time (real-time) for description of its behaviour.
+Even if only a small part of description deals with "real-time".
+A system fully-describable with a qualitative notion of time is not real-time.
+** What is real-time ?
+Time measured/quantified using a physical clock. Real-time is a quantitative notion of time.
+_Definition_:
+_Example_: In case of a automated chemical reaction chamber, there can be an instruction like when temp. >= $$250^\circ C$$,
+         switch off the heater after 30 ms.
+The time value inside a RTS is calculated using an inbuilt physical clock. The time referred to must be evaluated
+using readings of that clock.
+** Logical time
+- used in conventional computing
+- qualitative notion of time
+- time is not absolute and is represented/expressed as a logical ordering
+- _Example_: "After the user logs in, present them the dashboard." Here the two events are represented by a logical time/ordering.
+- physical clock isn't required for this ordering.
+
+* Applications of RTS
+wide range of applicability
+** Industries
+Industries are one of the major users of RTS.
+*** Plant automater
+- RTS monitors periodic evaluation of conditions (pressure, temp., concentration of gases) in chemical power plants.
+- The automater takes decisions for rate of reaction according to values at a given instant of time.
+- This is brought about by change in conditions. The changes must also be done within time bounds (order of $$\mu$$s to ms).
+*** Assembly lines
+- Consists of a conveyor belt and workstations.
+- Unfinished product moves along the belt and is worked upon by the workstations.
+- Workstation react to the arrival of the partial product via sensors.
+- The workstation must finish in a _given time bound_ (few hundred ms) after which the partial product moves ahead.
+*** SCADA (Supervisory control and data acquisition)
+- distributed control system
+- It is a system to record various variables.
+- stores them in a real-time DB after processing
+- DB represents current state of the environment
+- the state being real-time can be used to model realistic environments
+- Used in Energy Management System (EMS), network load balancing etc.
+- Sensing is done after regular intervals.
+
+** Medical
+_Robots used to fix dislocated radioactive apparatus_ must plan a path to it while sensing obstacles in real-time. Bound is a few ms.
+** Peripherals
+- Laser printers - stop printing if paper runs out, perform drawing calculations in a time constraint, sense paper jams, typesetting etc.
+- Digital cameras
+** Automobiles
+- AI navigating
+- Air traffic control
+- Train control
+- engine control
+- road signal control
+- Multi-point Fuel Injection (MPFI) (better than carburetor)
+- Automatic airbags
+** Cellular
+Base station hand-off in real-time via (received signal strength) RSS sampling.
+** Aeronautics
+Autopilot is a RTS that does all sampling and suitable correction when plane deviates from pre-computed path.
+** Missile guidance
+Must sense variables like velocity and coordinates and apply path correction in real time. Target must also be sensed periodically.

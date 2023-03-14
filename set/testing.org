@@ -1,0 +1,44 @@
+#+TITLE: Testing
+#+DESCRIPTION: An introduction to software testing.
+#+AUTHOR: Rahul Sharma
+
+* Software Testing
+** Definition
+- _Software testing_: process of validating/verifying if an app./software/product:
+  + Meets business/tech. req. presented during design
+  + works as expected
+  + can be reimplemented using same procedure and have same characteristics (end result)
+- /Involves any activity aimed at eval. an attrib. of the app./
+- determines that the software products satisfy customers requirements and are fit for customer use.
+- finds flaws in a software product
+NOTE: Cost of corecting increases as the product traverses thru its life cycle.
+*** Properties
+- _integral part_ of /planning, preparation and evaluation/ aspects software products.
+- _rigorous_ examination of software.
+- _Concurrent and Coherent_: in most practical development procedures, it happens at every stage of development coherently
+- _Iterative_: in nature i.e. test after fixing prev. flaws
+
+** Verification: Is the product right ?
+process of examining if a product meets a given set of characteristics or /conforms to the specs/.
+- It usually involves reviews and meetings for:
+  + dicussing plans
+  + formulating requirements
+  + defining specification
+  + evaluate significant documents
+- happens at the product developer's end.
+- all specifications must be applied.
+- product specs. and quality req. are stated formally
+- documented so can measured and analyzed
+- ensures things are built the right way
+- inspective activities must be done to verify
+*** Example:
+Consider development of a cell phone. All req. are laid after collecting info from market and specs. are made thru meetings. Then procedures must be designed to ensure that the product matches the specified specs.
+
+** Validation: Is it the right product ?
+- process of checking if the product meets the user's requirements.
+- Happens at the user's end
+- before verification
+- determine if the desired product was prepared
+- ensures building the thing right
+*** Example:
+The cell phone had thicker bezels and no front camera. User disliked it and the product failed.
